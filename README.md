@@ -52,15 +52,6 @@ An AI-powered plagiarism detection system built using **Natural Language Process
 
 ---
 
-## Dataset
-
-The project uses a custom dataset stored in:
-
-```bash
-dataset.csv
-```
-
-
 ## Future Improvements
 
 * Add deep learning models (BERT, LSTM)
