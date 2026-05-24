@@ -4,7 +4,7 @@ An AI-powered plagiarism detection system built using **Natural Language Process
 
 ---
 
-## 🚀 Features
+## Features
 
 * Detects plagiarized or duplicated text
 * Uses **TF-IDF Vectorization** for feature extraction
@@ -15,7 +15,7 @@ An AI-powered plagiarism detection system built using **Natural Language Process
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Python**
 * **Flask**
@@ -26,7 +26,7 @@ An AI-powered plagiarism detection system built using **Natural Language Process
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. User enters or uploads text.
 2. Text is cleaned and preprocessed.
@@ -36,7 +36,7 @@ An AI-powered plagiarism detection system built using **Natural Language Process
 
 ---
 
-## 🧠 Machine Learning Model
+## Machine Learning Model
 
 ### Model Used:
 
@@ -52,7 +52,7 @@ An AI-powered plagiarism detection system built using **Natural Language Process
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 The project uses a custom dataset stored in:
 
@@ -60,53 +60,8 @@ The project uses a custom dataset stored in:
 dataset.csv
 ```
 
-It contains text samples labeled as:
 
-* Plagiarized
-* Non-Plagiarized
-
----
-
-## ▶️ Installation & Setup
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/your-username/Combat_Online_Plagiarism_with_AI.git
-cd Combat_Online_Plagiarism_with_AI
-```
-
-### 2️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3️⃣ Run the Application
-
-```bash
-python app.py
-```
-
-### 4️⃣ Open in Browser
-
-```bash
-http://127.0.0.1:5000
-```
-
----
-
-## 📸 Output
-
-The application displays:
-
-* Plagiarism prediction
-* Similarity percentage
-* Duplicate text detection result
-
----
-
-## 📌 Future Improvements
+## Future Improvements
 
 * Add deep learning models (BERT, LSTM)
 * Upload PDF/DOCX support
@@ -116,7 +71,7 @@ The application displays:
 
 ---
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
 
 Through this project, you can learn:
 
