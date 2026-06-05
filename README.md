@@ -18,8 +18,7 @@ An AI-powered plagiarism detection system built using **Natural Language Process
 ## Tech Stack
 
 * **Python**
-* **HTML**
-* **JavaScript**
+* **Flask**
 * **scikit-learn**
 * **NLTK**
 * **Pandas**
