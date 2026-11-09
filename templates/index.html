@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Detector</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <aside id="sidebar">
+        <h2>✦ PlagiarismDetector</h2>
+
+        <nav>
+            <button type="button" class="nav active" data-view="new">
+                ✧ New Analysis
+            </button>
+
+            <button type="button" class="nav" data-view="history">
+                ◷ Analysis History
+            </button>
+        </nav>
+    </aside>
+
+    <main>
+
+        <header>
+            <button type="button" id="menuBtn">☰</button>
+            <span id="crumb">New analysis</span>
+            <button type="button" id="themeToggle">☾ Theme</button>
+        </header>
+
+        <section id="newView" class="view active">
+
+            <h1>Plagiarism Detector</h1>
+
+            <p>Analyze your content with intelligent machine learning technology.</p>
+
+            <div class="tabs">
+                <button type="button" data-tab="text" class="active">
+                    ✎ Paste Text
+                </button>
+
+                <button type="button" data-tab="upload">
+                    ⇧ Upload Document
+                </button>
+            </div>
+
+            <div id="textPane" class="pane active">
+
+                <label for="textInput">Your Content</label>
+
+                <textarea
+                    id="textInput"
+                    placeholder="Paste or type your content here..."
+                ></textarea>
+
+                <div>
+                    <span id="words">0 words</span>
+                    <span id="chars">0 characters</span>
+                </div>
+
+            </div>
+
+            <div id="uploadPane" class="pane">
+
+                <div id="drop">
+
+                    <p>⇧</p>
+
+                    <h3>Drag and drop your file here</h3>
+
+                    <p>or choose a file from your device</p>
+
+                    <input
+                        type="file"
+                        id="fileInput"
+                        accept=".txt,.pdf,.docx"
+                    >
+
+                </div>
+
+                <div id="chosen" class="hidden">
+
+                    <span id="fileName"></span>
+
+                    <button type="button" id="removeFile">
+                        Remove
+                    </button>
+
+                </div>
+
+            </div>
+
+            <p id="error" class="hidden"></p>
+
+            <div id="loading" class="hidden">
+                AI is analyzing your content...
+            </div>
+
+            <div>
+                <button type="button" id="analyzeBtn">
+                    ✦ Analyze Content →
+                </button>
+
+                <button type="button" id="clearBtn">
+                    Clear
+                </button>
+            </div>
+
+            <section id="results" class="hidden">
+
+                <h2>Analysis Results</h2>
+
+                <div id="verdictIcon">✓</div>
+
+                <h3 id="prediction"></h3>
+
+                <p id="description"></p>
+
+                <span id="tag"></span>
+
+                <p>
+                    Word Count:
+                    <span id="resultWords"></span>
+                </p>
+
+                <p>
+                    Characters:
+                    <span id="resultChars"></span>
+                </p>
+
+                <p>
+                    Document:
+                    <span id="resultSource"></span>
+                </p>
+
+                <p>
+                    Date:
+                    <span id="resultTime"></span>
+                </p>
+
+                <button type="button" id="downloadBtn">
+                    Download PDF Report
+                </button>
+
+            </section>
+
+        </section>
+
+        <section id="historyView" class="view">
+
+            <h1>Analysis History</h1>
+
+            <p>
+                <span id="historyCount">0</span> analyses
+            </p>
+
+            <span id="recordCount">0 records</span>
+
+            <button type="button" id="refreshBtn">
+                ↻ Refresh
+            </button>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Document</th>
+                            <th>Date</th>
+                            <th>Words</th>
+                            <th>Prediction</th>
+                            <th>Report</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="historyRows">
+
+                        <tr>
+                            <td colspan="5" class="empty">
+                                No analyses yet.
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
